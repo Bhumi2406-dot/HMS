@@ -1,0 +1,3 @@
+ALTER TABLE lab_results ADD COLUMN abnormal INTEGER NOT NULL DEFAULT 0 CHECK(abnormal IN (0,1));
+ALTER TABLE invoices ADD COLUMN due_date TEXT;
+ALTER TABLE doctors ADD COLUMN availability_status TEXT NOT NULL DEFAULT 'AVAILABLE' CHECK(availability_status IN ('AVAILABLE','ON_LEAVE','UNAVAILABLE'));
